@@ -1,0 +1,44 @@
+### SIGN UP
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+  "email": "ol@gmail.com",
+  "password": "adff4",
+  "ok": "ok"
+}
+
+### SIGN IN
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "olax2@gmail.com",
+  "password": "adff4",
+  "ok": "ok"
+}
+
+### GET BY ID
+GET http://localhost:3000/auth/2
+
+### GET ALL BY EMAIL
+GET http://localhost:3000/auth?email=asss1233@gmail.com
+
+### DELETE BY ID
+DELETE http://localhost:3000/auth/3
+
+### UDPATE BY ID
+PATCH http://localhost:3000/auth/4
+content-type: application/json
+
+{
+  "email": "ola2@gmail.com",
+  "password": "ola"
+}
+
+### GET WHO AM I
+GET http://localhost:3000/auth/whoami
+
+### SIGN OUT
+POST http://localhost:3000/auth/signout
+

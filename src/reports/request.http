@@ -1,0 +1,26 @@
+### CREATE REPORT
+POST http://localhost:3000/reports
+content-type: application/json
+
+{
+  "make": "toyota",
+  "model": "corolla",
+  "year": 2019,
+  "price": 12000,
+  "mileage": 100,
+  "lng": 45,
+  "lat": 45
+}
+
+### APPROVE REPORT
+PATCH http://localhost:3000/reports/6
+content-type: application/json
+
+{
+  "approved": false
+}
+
+### GET REPORT ESTIMATE
+GET http://localhost:3000/reports?make=toyota&model=corolla&lng=45&lat=45&year=2018&mileage=1000
+
+
