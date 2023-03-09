@@ -24,7 +24,12 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript repository.
+
+This is the project done as an example of Nest, TypeORM, Typescript simple application used for predicting car values.
+
+Followed from the NestJS: The Complete Developer's Guide by Stephen Grider on Udemy.
+
 
 ## Installation
 
