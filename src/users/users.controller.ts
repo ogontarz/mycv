@@ -10,7 +10,7 @@ import {
   NotFoundException,
   HttpCode,
   Session,
-  UseGuards
+  UseGuards,
 } from '@nestjs/common';
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
@@ -25,7 +25,10 @@ import { AuthGuard } from '../guards/auth.guard';
 @Serialize(UserDto)
 @Controller('auth')
 export class UsersController {
-  constructor(private usersService: UsersService, private authService: AuthService) {}
+  constructor(
+    private usersService: UsersService,
+    private authService: AuthService,
+  ) {}
 
   @UseGuards(AuthGuard)
   @Get('/whoami')
@@ -38,7 +41,7 @@ export class UsersController {
     session.userId = null;
   }
 
-  @Post('/signup',)
+  @Post('/signup')
   async signUp(@Body() body: CreateUserDto, @Session() session: any) {
     const user = await this.authService.signup(body.email, body.password);
     session.userId = user.id;
